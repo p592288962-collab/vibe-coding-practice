@@ -1,0 +1,210 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #00ff66;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    background: #141414;
+    border: 2px solid #00ff66;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 255, 102, 0.2);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 1px dashed #00ff66;
+    padding-bottom: 15px;
+}
+
+h1 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    color: #008837;
+    margin-top: 5px;
+}
+
+.translator-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media (min-width: 768px) {
+    .translator-box {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #00ff66;
+}
+
+textarea {
+    width: 100%;
+    height: 180px;
+    background-color: #050505;
+    border: 1px solid #00aa44;
+    color: #00ff66;
+    padding: 12px;
+    font-size: 1rem;
+    resize: none;
+    outline: none;
+}
+
+    textarea:focus {
+        border-color: #00ff66;
+        box-shadow: 0 0 8px rgba(0, 255, 102, 0.4);
+    }
+
+.action-area {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: #00ff66;
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+    button:hover {
+        background-color: #00cc52;
+        box-shadow: 0 0 10px rgba(0, 255, 102, 0.6);
+    }
+
+footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.85rem;
+    border-top: 1px dashed #00ff66;
+    padding-top: 15px;
+}
+
+    footer a {
+        color: #00ff66;
+        text-decoration: underline;
+    }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+/* 逮捕彩蛋 Modal 樣式 */
+.hidden {
+    display: none !important;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: flash-red 0.8s infinite alternate;
+}
+
+@keyframes flash-red {
+    0% {
+        background-color: rgba(180, 0, 0, 0.4);
+    }
+
+    100% {
+        background-color: rgba(80, 0, 0, 0.85);
+    }
+}
+
+.modal-content {
+    background-color: #0a0000;
+    border: 4px solid #ff0000;
+    box-shadow: 0 0 35px #ff0000;
+    padding: 25px;
+    max-width: 650px;
+    width: 90%;
+    text-align: center;
+    color: #ff3333;
+}
+
+.alarm-title {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    animation: blink 0.5s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.arrest-img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border: 2px solid #ff0000;
+    margin-bottom: 15px;
+}
+
+.alarm-text {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.alarm-subtext {
+    font-size: 0.9rem;
+    color: #ff8888;
+    margin-bottom: 20px;
+}
+
+#close-modal-btn {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+    #close-modal-btn:hover {
+        background-color: #cc0000;
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    }

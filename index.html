@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newspeak Translator - Ministry of Truth</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>NEWSPEAK TRANSLATOR</h1>
+      <p class="subtitle">WAR IS PEACE • FREEDOM IS SLAVERY • IGNORANCE IS STRENGTH</p>
+    </header>
+
+    <main class="translator-box">
+      <div class="panel">
+        <label for="english-text">ENGLISH (OLDSPEAK)</label>
+        <textarea id="english-text" placeholder="Enter Oldspeak text here..."></textarea>
+      </div>
+
+      <div class="action-area">
+        <button id="translate-btn">TRANSLATE</button>
+      </div>
+
+      <div class="panel">
+        <label for="newspeak-text">NEWSPEAK</label>
+        <textarea id="newspeak-text" readonly placeholder="Result will appear here..."></textarea>
+      </div>
+    </main>
+
+    <footer>
+      <p>Consult the official <a href="https://orwell.ru/library/novels/1984/english/en_app" target="_blank" rel="noopener noreferrer">Newspeak Dictionary (Appendix to 1984)</a></p>
+    </footer>
+  </div>
+
+  <!-- 思想罪逮捕彈窗彩蛋 -->
+  <div id="arrest-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2 class="alarm-title">⚠️ CRIMETHINK DETECTED ⚠️</h2>
+      <img src="assets/images/arrest.jpg" alt="Thought Police Arrest" class="arrest-img">
+      <p class="alarm-text">YOUR THOUGHTCRIME HAS BEEN LOGGED BY THE MINISTRY OF LOVE.</p>
+      <p class="alarm-subtext">THE THOUGHT POLICE AND O'BRIEN ARE AT YOUR DOOR.</p>
+      <button id="close-modal-btn">ACKNOWLEDGE GUILT</button>
+    </div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
